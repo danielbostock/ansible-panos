@@ -1,0 +1,19 @@
+## Service Objects Vars File used with create_service_objects.yml
+
+## This vars file is a dictionary var file. Change the <InsertService#Name> to whatever you want for
+## reference, it is not used by the play, it used for structural organisation. The name of the object
+## created is the service_name key pair.
+
+service_objects:
+  InsertService1Name:
+    service_name: servicename1
+    service_port: 28015
+    service_description: This is service1
+  InsertService2Name:
+    service_name: servicename2
+    service_port: 28016
+    service_description: This is service2
+  InsertService3Name:
+    service_name: servicename3
+    service_port: 28017
+    service_description: This is service3
