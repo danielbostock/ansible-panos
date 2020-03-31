@@ -1,19 +1,41 @@
 ## Service Objects Vars File used with create_service_objects.yml
 
-## This vars file is a dictionary var file. Change the <InsertService#Name> to whatever you want for
-## reference, it is not used by the play, it used for structural organisation. The name of the object
-## created is the service_name key pair.
+## This vars file is a dictionary var file. 
+
+## Dict File Items
+## InsertService#Name:
+## Change the <InsertService#Name> to whatever you want for reference, it is not used by the play, it 
+## used for structural organisation. The name of the object created is the service_name key pair.
+## 
+## Keys Pairs
+## service_name: = This is the name of the service you want to create
+## service_port: = Port number
+## service_description: = Description
+## service_protocol: = UDP or TCP
+## service_group_name: Exact name match of the service group name existing or desired
+
+## Things to note
+## All pair values are mandatory.
+## If service name already exists, it will not be overwritten, the names have to be unique so if the port
+## is different to the name, you will need to modify.
+## If service_group_name is not exact, a new one is created - be sure the spelling is correct.
 
 service_objects:
   InsertService1Name:
     service_name: servicename1
     service_port: 28015
+    service_protocol: udp
     service_description: This is service1
+    service_group_name: Service_Group_Name1
   InsertService2Name:
     service_name: servicename2
     service_port: 28016
+    service_protocol: udp
     service_description: This is service2
+    service_group_name: Service_Group_Name1
   InsertService3Name:
     service_name: servicename3
     service_port: 28017
+    service_protocol: udp
     service_description: This is service3
+    service_group_name: Service_Group_Name2
