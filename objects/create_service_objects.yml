@@ -63,6 +63,7 @@
       name: '{{ item.value.service_name }}'
       destination_port: '{{ item.value.service_port }}'
       description: '{{ item.value.service_description }}'
+      protocol: '{{ item.value.service_protocol }}'
       state: 'present'
       #tag: ['AnsibleTest']
     with_dict: "{{ service_objects }}"
