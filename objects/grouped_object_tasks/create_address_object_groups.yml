@@ -47,7 +47,7 @@
 
   tasks:
   - name: Grab the credentials from ansible-vault
-    include_vars: 'vault_entry7.yml'
+    include_vars: 'vaultfile1.yml'
     no_log: 'yes'
 
 ## This is the beginning of the changes
