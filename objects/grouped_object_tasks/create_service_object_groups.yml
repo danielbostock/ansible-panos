@@ -40,8 +40,8 @@
     - service_object_groups: ./service_object_groups.yml
 
 ## This admin list is used by the commit action at the end to commit any changes by specific users,
-## with this playbook, it will be leveraging NVFW1-API user only. Any other commits currently sitting in
-## the Palo's will not be committed if they are under another user.
+## with this playbook, it will be leveraging fvwadmin1 user only, adjust accordingly.
+## Any other commits currently sitting in the Palo's will not be committed if they are under another user.
 
     - admins:
        - fwadmin1 
