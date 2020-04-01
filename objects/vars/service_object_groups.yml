@@ -1,3 +1,27 @@
+## Service Objects Vars File used with create_service_objects.yml
+
+## This vars file is a dictionary var file. 
+
+## Dict File Items
+## ServiceObjectGroup#:
+## Change the <ServiceObjectGroup#> to whatever you want for reference, it is not used by the play, it 
+## used for structural organisation. The name of the object created is the service_name key pair.
+## 
+## Keys Pairs
+## service_group_name: = This is the name of the service you want to create
+## service_objects: = Exact name match of service objects, it will error out if the name is not an
+## exact match.
+
+##
+## -- Things to note --
+## All pair values are mandatory.
+## The service_objects key pair needs to match exactly
+##
+
+## The same service object can be in multiple different groups, more groups can be added here, as many
+## as you need, follow the same pattern as outlined below or add variables that match the respective
+## params you wish to add in.
+
 service_object_groups:
   ServiceObjectGroup1:
     service_group_name: Service_Group_Name1
