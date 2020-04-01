@@ -1,0 +1,7 @@
+service_object_groups:
+  ServiceObjectGroup1:
+    service_group_name: Service_Group_Name1
+    service_objects: ['servicename1', 'servicename2']
+  ServiceObjectGroup2:
+    service_group_name: Service_Group_Name2
+    service_objects: servicename3
