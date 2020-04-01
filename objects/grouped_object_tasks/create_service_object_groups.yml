@@ -13,7 +13,6 @@
 - name: Add some service objects to the firewall and put them into a service object group
   hosts: localhost
   connection: local
-  gather_facts: False
 
 ## Ensure the Palo Alto Ansible Role (Collection) has been installed. There are some requirements as well for the
 ## role. Often you will get prompted if you need a specific module such as for example paramiko.
