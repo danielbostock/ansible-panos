@@ -3,14 +3,11 @@ address_objects:
     address_name: Server1
     address_ip: '10.20.10.1'
     address_description: This is a test address object1
-    address_group_name: Address_Group_Object1
   AddressObject2:
     address_name: Server2
     address_ip: '10.20.10.2'
     address_description: This is a test address object2
-    address_group_name: Address_Group_Object1
   AddressObject3:
     address_name: Server3
     address_ip: '10.20.10.3'
     address_description: This is a test address object3
-    address_group_name: Address_Group_Object2
