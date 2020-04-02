@@ -24,8 +24,8 @@
 ## These are the var files which is used to create the service objects. Add the objects into here that you
 ## would like to deploy.
   vars_files:
-    - ./service_objects.yml
-    - ./service_object_groups.yml
+    - vars/service_objects.yml
+    - vars/service_object_groups.yml
 
 ## This variable is referenced with the commit action at the end of the play.
 
@@ -47,7 +47,7 @@
 
   tasks:
   - name: Grab the credentials from ansible-vault
-    include_vars: 'vaultfile1.yml'
+    include_vars: 'vars/vaultfile1.yml'
     #no_log: 'yes'
 
 ## This is the beginning of the changes
