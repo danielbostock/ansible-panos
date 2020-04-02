@@ -25,7 +25,7 @@
 ## This is the vars file which is used to create the service objects. Add the objects into here that you
 ## would like to deploy.
   vars_files:
-    - ./service_objects.yml
+    - vars/service_objects.yml
 
 ## This variable is referenced with the commit action at the end of the play.
 
@@ -49,7 +49,7 @@
 ## variable file used here. Alternatively, remove the variables below that much panos_provider. You can
 ## if testing, manually insert the information instead of using a variable file.  
   - name: Grab the credentials from ansible-vault
-    include_vars: 'vaultfile.yml'
+    include_vars: 'vars/vaultfile.yml'
     no_log: 'yes'
 
 ## The tag parameter has been commented out, this is because the tag has to exist prior to this play
