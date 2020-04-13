@@ -2,6 +2,8 @@ address_object_groups:
   AddressObjectGroup1:
     address_group_name: Address_Group_Object1
     address_objects: ['Server1', 'Server2']
+    tag: 'Addr_Obj_Grp1'
   AddressObjectGroup2:
     address_group_name: Address_Group_Object2
     address_objects: Server3
+    tag: 'Addr_Obj_Grp2'
