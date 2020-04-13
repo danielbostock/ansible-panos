@@ -1,0 +1,9 @@
+tag_objects:
+  Addr_Obj_Grp1: 
+    name: 'Addr_Obj_Grp1'
+    color: 'purple'
+    comments: 'Address Object Group1'
+  Addr_Obj_Grp2:
+    name: 'Addr_Obj_Grp2'
+    color: 'blue'
+    comments: 'Address Object Group2'
