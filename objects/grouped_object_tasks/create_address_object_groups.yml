@@ -80,6 +80,8 @@
       name: '{{ item.value.address_group_name }}'
       static_value: '{{ item.value.address_objects }}'
       commit: no
+## In order for this to work you need to have an existing an existing tag, so ensure this tag exists
+## if the tag does not exist, it will be created automatically, but without comments and color.
       tag: '{{ item.value.tag }}'
     with_dict: "{{ address_object_groups }}"
 
