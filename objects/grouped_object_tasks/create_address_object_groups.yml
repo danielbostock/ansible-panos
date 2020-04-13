@@ -26,6 +26,7 @@
   vars_files:
     - vars/address_objects.yml
     - vars/address_object_groups.yml
+    - ./tag_objects.yml
 
 ## This variable is referenced with the commit action at the end of the play.
 
@@ -37,6 +38,7 @@
         api_key: '{{ api_key }}'
     - address_objects: ./address_objects.yml
     - address_object_groups: ./address_object_groups.yml
+    - tag_objects: ./tag_objects.yml
 
 ## This admin list is used by the commit action at the end to commit any changes by specific users,
 ## with this playbook, it will be leveraging fvwadmin1 user only, adjust accordingly.
@@ -50,7 +52,14 @@
     include_vars: 'vars/vaultfile1.yml'
     no_log: 'yes'
 
-## This is the beginning of the changes
+  - name: Create the tags
+    panos_tag_object:
+      provider: '{{ panos_provider }}'
+      name: '{{ item.value.name }}'
+      color: '{{ item.value.color }}'
+      comments: '{{ item.value.comments }}'
+      commit: no
+    with_dict: "{{ tag_objects }}"
 
   - name: Create address objects from vars file - address_objects.yml
     panos_address_object:
@@ -60,7 +69,8 @@
       description: '{{ item.value.address_description }}'
       state: 'present'
 ## In order for this to work you need to have an existing an existing tag, so ensure this tag exists
-      #tag: ['AnsibleTest']
+## if the tag does not exist, it will be created automatically, but without comments and color.
+      tag: '{{ item.value.tag }}'
       commit: no
     with_dict: "{{ address_objects }}"
 
@@ -70,7 +80,7 @@
       name: '{{ item.value.address_group_name }}'
       static_value: '{{ item.value.address_objects }}'
       commit: no
-      #tag: ['Prod']
+      tag: '{{ item.value.tag }}'
     with_dict: "{{ address_object_groups }}"
 
 ## This will commit these changes, remove this command (or comment out) if you do not wish for it to
